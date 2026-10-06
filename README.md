@@ -1,37 +1,26 @@
-# Thesis & Internship Opportunities
+# Thesis & Internship Opportunities — GitHub Pages
 
-GitHub Pages website for Roberta Calegari's Master's thesis, project thesis and internship opportunities at the University of Bologna.
+A lightweight GitHub Pages site for Prof. Roberta Calegari's thesis, project-thesis and internship opportunities.
 
-## Files
+## Publish on GitHub Pages
 
-- `index.html` — main public page
-- `assets/css/style.css` — visual design
-- `assets/js/filter.js` — cluster filter interactions
-
-## Publish with GitHub Pages
-
-1. Create a new GitHub repository, for example `thesis-opportunities`.
-2. Upload all files from this folder, keeping the same directory structure.
+1. Create a repository, for example `thesis-opportunities`.
+2. Upload the contents of this folder to the repository root.
 3. Open **Settings → Pages**.
 4. Under **Build and deployment**, choose **Deploy from a branch**.
-5. Select the `main` branch and the `/ (root)` folder, then save.
-6. GitHub will publish the site at the repository's GitHub Pages URL.
+5. Select branch `main` and folder `/ (root)`, then save.
 
-No build step is required: this is a static HTML/CSS/JavaScript site.
+The site is static HTML/CSS/JavaScript, so no build step is required.
 
-## Updating the page
+## Structure
 
-To add or modify an opportunity, edit `index.html`. Each project is a `<article class="card">` with a `data-cluster` value matching one or more filters: `trustworthy`, `civic`, `agentic`, `efficient`, or `data`.
+- `index.html` — page content and research-cluster cards
+- `assets/css/style.css` — visual design and responsive layout
+- `assets/js/filter.js` — interactive research-area panel
+- `.nojekyll` — disables Jekyll processing
 
-Keep the project structure consistent:
+## Interaction
 
-- cluster
-- title
-- short summary
-- keywords
-- possible directions
-- project type badges
+Research-area cards open the corresponding thesis topics in a compact panel directly below the cards. The page does not navigate to a long list of projects.
 
-## Suggested workflow
-
-Use the page as the stable overview of your research agenda. When a topic is no longer available, change its wording or add an availability label rather than deleting it, so the research direction remains visible.
+To add or edit opportunities, update the `clusters` object in `assets/js/filter.js`.
